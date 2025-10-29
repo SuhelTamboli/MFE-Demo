@@ -1,13 +1,13 @@
 import { Suspense, lazy } from "react";
 
-const RemoteWidget = lazy(() => import("remote/Widget"));
+const RemoteWidgetApp = lazy(() => import("remote/WidgetApp"));
 
 function App() {
   return (
     <div>
       <h1>Host App</h1>
-      <Suspense fallback={<div>Loading remote widget...</div>}>
-        <RemoteWidget />
+      <Suspense fallback={<div>Loading remote widget app...</div>}>
+        <RemoteWidgetApp />
       </Suspense>
     </div>
   );

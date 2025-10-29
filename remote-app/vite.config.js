@@ -9,7 +9,8 @@ export default defineConfig({
       name: "remote",
       filename: "remoteEntry.js",
       exposes: {
-        "./Widget": "./src/Widget.jsx",
+        "./WidgetApp": "./src/App.jsx",
+        "./Widget": "./src/components/Widget/Widget.jsx",
       },
       shared: ["react", "react-dom"],
     }),

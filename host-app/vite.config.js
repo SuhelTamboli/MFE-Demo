@@ -9,8 +9,11 @@ export default defineConfig({
       name: "host",
       remotes: {
         // firstMFE: "http://localhost:5001/assets/remoteEntry.js",
+        // secondMFE: "http://localhost:5002/assets/remoteEntry.js",
         firstMFE:
           "https://mfe-widget-with-react.vercel.app/assets/remoteEntry.js",
+        secondMFE:
+          "https://mfe-form-with-react.vercel.app/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),

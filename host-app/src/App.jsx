@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 
 const FirstMfeWidgetApp = lazy(() => import("firstMFE/WidgetApp"));
+const SecondMfeFormApp = lazy(() => import("secondMFE/FormApp"));
 
 function App() {
   return (
@@ -18,22 +19,35 @@ function App() {
           <Link to="/about" style={{ marginRight: "1rem" }}>
             Host About
           </Link>
-          <Link to="/firstMfe/widget">Remote Widget</Link>
+          <Link to="/firstMfe/widget">first MFE Widget</Link>
+          <Link to="/secondMfe/signup">second MFE Form</Link>
         </nav>
 
-        <Suspense fallback={<div>Loading remote…</div>}>
-          <Routes>
-            {/* 1. Host pages */}
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+        <Routes>
+          {/* 1. Host pages */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
 
-            {/* 2. Mount the whole remote under /remote */}
-            <Route
-              path="/firstMfe/*" // <-- catch /remote, /remote/widget, …
-              element={<FirstMfeWidgetApp />}
-            />
-          </Routes>
-        </Suspense>
+          {/* 2. Mount the whole first MFE under /firstMfe */}
+          <Route
+            path="/firstMfe/*" // <-- catch /firstMfe, /firstMfe/widget, …
+            element={
+              <Suspense fallback={<div>Loading first MFE Widget…</div>}>
+                <FirstMfeWidgetApp />
+              </Suspense>
+            }
+          />
+
+          {/* 2. Mount the whole second MFE under /firstMfe */}
+          <Route
+            path="/secondMfe/*" // <-- catch /secondMfe, /secondMfe/widget, …
+            element={
+              <Suspense fallback={<div>Loading second MFE Form…</div>}>
+                <SecondMfeFormApp />
+              </Suspense>
+            }
+          />
+        </Routes>
       </BrowserRouter>
     </div>
   );

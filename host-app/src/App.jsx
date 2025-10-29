@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 
-const RemoteWidgetApp = lazy(() => import("remote/WidgetApp"));
+const FirstMfeWidgetApp = lazy(() => import("firstMFE/WidgetApp"));
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Link to="/about" style={{ marginRight: "1rem" }}>
             Host About
           </Link>
-          <Link to="/remote/widget">Remote Widget</Link>
+          <Link to="/firstMfe/widget">Remote Widget</Link>
         </nav>
 
         <Suspense fallback={<div>Loading remote…</div>}>
@@ -29,8 +29,8 @@ function App() {
 
             {/* 2. Mount the whole remote under /remote */}
             <Route
-              path="/remote/*" // <-- catch /remote, /remote/widget, …
-              element={<RemoteWidgetApp />}
+              path="/firstMfe/*" // <-- catch /remote, /remote/widget, …
+              element={<FirstMfeWidgetApp />}
             />
           </Routes>
         </Suspense>

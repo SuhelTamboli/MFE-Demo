@@ -12,7 +12,7 @@ export default defineConfig({
         remote:
           "https://mfe-widget-with-react.vercel.app/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   server: {

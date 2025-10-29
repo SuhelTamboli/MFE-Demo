@@ -12,7 +12,7 @@ export default defineConfig({
         "./WidgetApp": "./src/App.jsx",
         "./Widget": "./src/components/Widget/Widget.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   server: {

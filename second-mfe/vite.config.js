@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "secondMFE",
+      name: "auth",
       filename: "remoteEntry.js",
       exposes: {
-        "./FormApp": "./src/App.jsx",
-        "./SignUpForm": "./src/components/SignUp/SignUp.jsx",
+        "./AuthApp": "./src/App.jsx",
+        "./SignUpForm": "./src/components/Auth/SignUp.jsx",
+        "./SignInForm": "./src/components/Auth/SignIn.jsx",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),

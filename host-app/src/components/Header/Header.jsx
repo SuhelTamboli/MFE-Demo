@@ -7,7 +7,7 @@ const Header = () => {
       <Link to="/">
         <h3 className={styles["host-app-header-name"]}>Host App</h3>
       </Link>
-      <Link to="/signin">
+      <Link to="auth/signin">
         <button className={styles["host-app-header-login-button"]}>
           Login
         </button>

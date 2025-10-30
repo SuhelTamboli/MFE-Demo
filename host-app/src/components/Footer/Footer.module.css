@@ -1,7 +1,9 @@
 .host-app-footer-container {
   display: flex;
   justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
+  align-items: center; /* vertical centering */
   font-size: 1rem;
   font-weight: bold;
+  border-top: 1px solid gray;
+  height: 4vh;
 }

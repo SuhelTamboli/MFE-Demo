@@ -1,3 +1,7 @@
 .host-app-container {
     min-height: 100vh;
 }
+
+.host-app-main-body-container {
+    height: 90vh; 
+}

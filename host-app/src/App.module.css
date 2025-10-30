@@ -1,7 +1,12 @@
 .host-app-container {
-    min-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Scrollable Main Content */
 .host-app-main-body-container {
-    height: 90vh; 
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0; /* Optional: spacing */
 }

@@ -1,0 +1,24 @@
+.dashboard-container {
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Max 2 charts per row */
+  gap: 2rem;
+}
+
+.summary-section {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}

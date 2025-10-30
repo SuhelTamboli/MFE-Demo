@@ -1,9 +1,13 @@
 .host-app-footer-container {
-  display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center; /* vertical centering */
-  font-size: 1rem;
-  font-weight: bold;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  background-color: white;
   border-top: 1px solid gray;
   height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
 }

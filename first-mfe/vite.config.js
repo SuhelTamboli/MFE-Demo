@@ -6,11 +6,15 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "firstMFE",
+      name: "dashboard",
       filename: "remoteEntry.js",
       exposes: {
-        "./WidgetApp": "./src/App.jsx",
-        "./Widget": "./src/components/Widget/Widget.jsx",
+        "./DashboardApp": "./src/App.jsx",
+        "./BarChart": "./src/components/Charts/BarChart/BarChart.jsx",
+        "./PieChart": "./src/components/Charts/PieChart/PieChart.jsx",
+        "./LineChart": "./src/components/Charts/LineChart/LineChart.jsx",
+        "./MapView": "./src/components/Maps/MapView.jsx",
+        "./Dashboard": "./src/components/Dashboard/Dashboard.jsx",
       },
       shared: ["react", "react-dom", "react-router-dom"],
     }),

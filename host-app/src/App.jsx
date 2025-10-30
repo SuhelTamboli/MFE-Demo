@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import styles from "./App.module.css";
 import Footer from "./components/Footer/Footer";
 
-const FirstMfeWidgetApp = lazy(() => import("firstMFE/WidgetApp"));
+const DashboardMfeApp = lazy(() => import("dashboard/DashboardApp"));
 const AuthMfeApp = lazy(() => import("auth/AuthApp"));
 
 function App() {
@@ -19,18 +19,18 @@ function App() {
             {/* 1. Host App pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            {/* 2. Mount the whole first MFE under /firstMfe */}
+            {/* 2. Mount the whole dashboard MFE under /dashboard */}
             <Route
-              path="/firstMfe/*" // <-- catch /firstMfe, /firstMfe/widget, …
+              path="/dashboard/*" // <-- catch /dashboard, /dashboard/fulldashboard, …
               element={
-                <Suspense fallback={<div>Loading first MFE Widget…</div>}>
-                  <FirstMfeWidgetApp />
+                <Suspense fallback={<div>Loading dashboard MFE Full Dashboard</div>}>
+                  <DashboardMfeApp />
                 </Suspense>
               }
             />
             {/* 2. Mount the whole auth MFE under /auth */}
             <Route
-              path="/auth/*" // <-- catch /auth, /auth/widget, …
+              path="/auth/*" // <-- catch /auth, /auth/signin, …
               element={
                 <Suspense fallback={<div>Loading auth MFE Form</div>}>
                   <AuthMfeApp />

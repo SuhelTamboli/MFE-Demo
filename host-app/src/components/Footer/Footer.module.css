@@ -1,8 +1,7 @@
-.host-app-home-container {
+.host-app-footer-container {
   display: flex;
   justify-content: center; /* horizontal centering */
   align-items: center;     /* vertical centering */
-  height: 88vh;           /* full viewport height */
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }

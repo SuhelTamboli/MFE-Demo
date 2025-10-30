@@ -7,7 +7,7 @@ import styles from "./App.module.css";
 import Footer from "./components/Footer/Footer";
 
 const FirstMfeWidgetApp = lazy(() => import("firstMFE/WidgetApp"));
-const SecondMfeFormApp = lazy(() => import("auth/AuthApp"));
+const AuthMfeApp = lazy(() => import("auth/AuthApp"));
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
               path="/auth/*" // <-- catch /auth, /auth/widget, …
               element={
                 <Suspense fallback={<div>Loading auth MFE Form</div>}>
-                  <SecondMfeFormApp />
+                  <AuthMfeApp />
                 </Suspense>
               }
             />

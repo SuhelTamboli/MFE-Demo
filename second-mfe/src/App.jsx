@@ -6,7 +6,6 @@ import SignUp from "./components/Auth/SignUp";
 function App() {
   return (
     <div>
-      <h1>Auth MFE App</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />

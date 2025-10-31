@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Header from "./components/Header/Header";
 import styles from "./App.module.css";
 import Footer from "./components/Footer/Footer";
+import Spinner from "./components/Utilities/Spinner/Spinner";
 
 const DashboardMfeApp = lazy(() => import("dashboard/DashboardApp"));
 const AuthMfeApp = lazy(() => import("auth/AuthApp"));
@@ -23,7 +24,11 @@ function App() {
             <Route
               path="/dashboard/*" // <-- catch /dashboard, /dashboard/fulldashboard, …
               element={
-                <Suspense fallback={<div>Loading dashboard MFE Full Dashboard</div>}>
+                <Suspense
+                  fallback={
+                    <Spinner text="Loading Dashboard MFE – Full Dashboard..." />
+                  }
+                >
                   <DashboardMfeApp />
                 </Suspense>
               }
@@ -32,7 +37,9 @@ function App() {
             <Route
               path="/auth/*" // <-- catch /auth, /auth/signin, …
               element={
-                <Suspense fallback={<div>Loading auth MFE Form</div>}>
+                <Suspense fallback={
+                  <Spinner text="Loading auth MFE - Form..." />
+                }>
                   <AuthMfeApp />
                 </Suspense>
               }
